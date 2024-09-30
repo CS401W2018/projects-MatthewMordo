@@ -1,0 +1,67 @@
+
+body {
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 16px; 
+    color: #131212; 
+    background-color: #f0f0f0; 
+}
+
+/* Header styling */
+#main-header {
+    background-color: rgb(45, 45, 209);
+    color: white;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #07a0e7; 
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #e04911; 
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav span {
+    color: #26415c; 
+}
+
+
+main p {
+    line-height: 1.6;
+    margin: 25px 0;
+}
+
+
+.highlight {
+    color: #ff0404;
+}
+
+.highlight1 {
+    color: #000000; 
+    
+}
+
+.bigger{
+    font-weight: bold;
+}
+
+.deemphasized {
+    color: #7c7c7c; 
+}
+
+footer {
+    background-color: #2268afe1; 
+    color: #d6d6d6;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 100;
+}
+
