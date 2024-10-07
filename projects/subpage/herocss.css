@@ -1,28 +1,29 @@
 /* Global styles for the Hero page */
 body {
-    font-family: Arial, sans-serif; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     font-size: 16px; 
     color: #000000; 
-    background-color: #e0e0e0; 
+    background-color: #D7C0D0; 
 }
 
 /* Header */
 header h1 {
-    background-color: rgb(45, 45, 209);
+    background-color: #545677;
     color: white; 
     font-size: 2em;
     text-align: center;
+    font-family: "Courier New", Courier, monospace;
 }
 
 
 nav {
-    background-color: #07a0e7; 
+    background-color: #779CAB; 
     padding: 10px;
     text-align: center;
 }
 
 nav a {
-    color: #e04911; 
+    color: #F19953; 
     text-decoration: none;
     margin: 0 10px;
 }
@@ -59,7 +60,7 @@ img {
 
 
 footer {
-    background-color: #00509E; 
+    background-color: #DA4167; 
     color: #fff;
     text-align: center;
     padding: 10px;

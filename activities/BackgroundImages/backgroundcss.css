@@ -1,0 +1,14 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color:bisque;
+    background: url(hanni2.jpg) lightblue no-repeat;
+    background-size: cover;
+}
+.list{
+    list-style-image: url('ttokiicon.png');
+}
+nav {
+    background-color: #538fa7; 
+    padding: 6px;
+    text-align: center;
+}
