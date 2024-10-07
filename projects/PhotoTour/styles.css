@@ -5,12 +5,13 @@ html, body {
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #000000; /* Fallback color */
     font-family: 'Arial', sans-serif;
     background-image: url(flowers.jpg);
     background-size: cover; /* Ensures the image covers the entire area */
     background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-repeat: repeat; /* Prevents the image from repeating */
+    min-height: 100vh; /* Ensures the body is at least the height of the viewport */
     display: flex; /* Enable flexbox layout */
     flex-direction: column; /* Stack children vertically */
 }
@@ -28,18 +29,23 @@ nav ul {
     text-align: center;
 }
 
-header{
+header {
     color: white;
     margin: 10px;
 }
-#first{
-    color: white;
-    margin: 10px;
+
+.header-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between header text and image */
 }
-#second{
-    color: white;
-    margin: 10px;
+
+.header-image {
+    width: 200px; /* Set width of the image (adjust as needed) */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Optional: adds space between text and image */
 }
+
 .list {
     list-style-image: url('ttokiicon.png'); /* Custom bullet point */
     color: #ffffff; /* Text color */
@@ -63,6 +69,13 @@ nav ul li a {
 nav ul li a.current {
     font-weight: bold;
     color: #ec3f19; /* Highlight current page link */
+}
+
+#first{
+    color: white;
+}
+#second{
+    color: white;
 }
 
 /* Footer styling */
