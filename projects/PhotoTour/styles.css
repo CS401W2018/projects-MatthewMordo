@@ -24,14 +24,44 @@ main {
 /* Navigation bar */
 nav ul {
     padding: 10px;
-    list-style-image: url('bullet.png'); /* Custom bullet point for the UL */
-    background-color: #4415ec;
+    background-color: #3a06f7; /* Background color of the navigation */
     text-align: center;
+}
+
+nav ul li {
+    display: inline; /* Keep items in a line */
+    margin-right: 10px; /* Space between items */
+}
+
+nav ul li a {
+    color: rgb(247, 246, 246); /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding for a better clickable area */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight color on hover */
+    color: #fcfcfc; /* Change text color on hover */
+}
+
+nav ul li a.current {
+    font-weight: bold; /* Bold the current page link */
+    color: #ec3f19; /* Highlight current page link */
 }
 
 header {
     color: white;
     margin: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #6f41da; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%; /* Make footer span full width */
 }
 
 .header-content {
@@ -55,34 +85,11 @@ header {
 .list li {
     margin-bottom: 15px; /* Adds space below each list item */
 }
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    color: rgb(247, 246, 246);
-    text-decoration: none;
-}
-
-nav ul li a.current {
-    font-weight: bold;
-    color: #ec3f19; /* Highlight current page link */
-}
-
 #first{
-    color: white;
+    color: #ffffff; /* Text color */
+    padding-left: 30px; /* Adds space on the left side of the list */
 }
 #second{
-    color: white;
-}
-
-/* Footer styling */
-footer {
-    background-color: #6f41da; 
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    width: 100%; /* Make footer span full width */
+    color: #ffffff; /* Text color */
+    padding-left: 30px; /* Adds space on the left side of the list */
 }
