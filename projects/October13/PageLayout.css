@@ -15,7 +15,7 @@ header {
     text-align: center;
     padding: 20px;
     border-radius: 50px;
-    color: rgb(255, 255, 255);
+    color: rgb(245, 245, 245);
 }
 
 h1 {
@@ -29,22 +29,22 @@ h1 {
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    padding: 10px;
+    background-color: #4321bb; 
+    text-align: center;
+    border-radius: 25px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline; 
+    margin-right: 10px; 
 }
 
 nav ul li a {
-    font-family: 'Verdana', sans-serif;
-    font-size: 18px;
-    color: rgb(8, 23, 245);
-    text-decoration: none;
-    text-transform: uppercase;
-    text-decoration: underline;
+    color: rgb(245, 241, 241); 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease; 
 }
 
 nav .active {
@@ -57,7 +57,7 @@ nav a {
     text-decoration: none;
     font-family: 'Verdana', sans-serif;
     font-size: 18px;
-    color: #333; 
+    color: #eb0808; 
     margin: 0 15px;
     padding: 10px;
     display: inline-block;
@@ -66,9 +66,10 @@ nav a {
 
 
 nav ul li a:hover {
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight color on hover */
+    color: #4e7fe9; /* Change text color on hover */
+    padding: 15px 15px; /* Increased padding on hover */
+    border-radius: 20px;
 }
 
 
@@ -147,6 +148,4 @@ header, main, footer {
     border-radius: 10px;
 }
 
-nav a:hover {
-    color: #ff0055;
-}
+
