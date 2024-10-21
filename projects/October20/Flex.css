@@ -43,7 +43,7 @@ nav ul li a {
 aside {
   flex: 1;
   background-color: #c9d6ff; 
-  padding: 10px;
+  padding: 25px;
   max-width: 200px;
   color: #1d1f33;
 }
@@ -61,7 +61,7 @@ main {
   width: 200px;
   height: 300px;
   perspective: 1000px; 
-  margin: 20px; 
+  margin: 50px; 
 }
 
 .card-inner {
@@ -96,7 +96,7 @@ main {
 
 .card-front img {
   width: 100%;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .card-back {
