@@ -1,0 +1,55 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+main{
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header{
+    background-color: bisque;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav{
+    display: none;
+}
+
+nav a{
+    display: block;
+    padding: 10px 5px;
+    color: aqua;
+    text-decoration: none;
+
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hyein{
+    flex: 1;
+    box-shadow: 3px 3px rgba(50,50,50,0.5);
+    width: 50%;
+    border: thin solid #000
+    
+}
+.hyein img{
+    flex: 1;
+    width: 100%;
+}
+
+footer{
+    background-color: aliceblue;
+    padding: 10px;
+}
+
