@@ -1,0 +1,93 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+    background-color: rgb(127, 146, 255);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: rgb(243, 73, 61);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav {
+    background-color: rgb(129, 202, 236);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 5px;
+    color: aqua;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hyein {
+    flex: 1;
+    box-shadow: 3px 3px rgba(50, 50, 50, 0.5);
+    width: 50%;
+    border: thin solid #000;
+}
+
+.hyein img {
+    flex: 1;
+    width: 100%;
+}
+
+footer {
+    background-color: rgb(122, 79, 201);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        background-color: aqua;
+    }
+    
+    nav {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column; 
+        align-items: stretch; 
+        padding: 50px;
+    }
+    
+    .hyein {
+        width: 100%;  
+        height: auto; 
+        display: block; 
+        
+    }
+
+    .hyein img {
+        width: 100%; 
+        height: auto; 
+        
+        display: block; 
+    }
+    
+    main {
+        padding: 10px; 
+    }
+}
