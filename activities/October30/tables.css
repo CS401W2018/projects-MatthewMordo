@@ -1,0 +1,23 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.border{
+    border: thin solid bisque;
+    margin: 5px auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+
+.border thead, .border tfoot{
+    background-color: blueviolet;
+}
+
+.border tbody tr:nth-child(even){
+    background-color: azure;
+}
+
+.border tbody tr:nth-child(odd){
+    background-color: rgb(17, 252, 29);
+}

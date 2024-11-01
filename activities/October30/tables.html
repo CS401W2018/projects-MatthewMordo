@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tables.css">
     <title>Document</title>
 </head>
 <body>
@@ -13,7 +14,8 @@
 
     </nav>
     <main>
-        <table border="2">
+        <table class="border">
+            <caption>Class Schedule</caption>
             <thead>
                 <th>Dept</th><th>Number</th><th>Time</th><th>Location</th><th>Credits</th>
             </thead>
@@ -39,12 +41,31 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th colspan="4">Total Credits</th>
+                    <th colspan="4" id="total-creds">Total Credits</th>
                     <td>12</td>
                 </tr>
             </tfoot>
         </table>
-        
+        <h2>Why don't we use the border property?</h2>
+        <blockquote>
+            <ul>
+                <li>The border property can be somewhat limited in styling tables, especially in complex designs. Instead, CSS can offer more flexibility with properties like border-collapse, border-spacing, and the use of pseudo-classes for styling.</li>
+            </ul>
+        </blockquote>
+        <h2>What is the easiest way to color every other row a different color?</h2>
+        <blockquote>
+            <ul>
+                <li>the easiest way to color the row of the table is using the nth-child(even) and nth-child(odd)</li>
+            </ul>
+        </blockquote>
+        <h2>Why don't we use the border property?</h2>
+        <blockquote>
+            <ul>
+                <li><strong>Data Presentation:</strong> You need to present data that is best understood in a tabular format, such as financial reports, schedules, or comparison data.</li>
+                <li><strong>Accessibility:</strong> Tables can be more accessible for screen readers when used correctly, as they can help convey the relationship between data points.</li>
+                <li><strong>Semantic Structure:</strong> When the data naturally forms a grid, using a table provides semantic meaning that can be important for SEO and usability.</li>
+            </ul>
+        </blockquote>
     </main>
     <footer>
         <p>&copy; 2024 Michael-Lee</p>
