@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <nav>
+        <a href="#">Link</a>
+    </nav>
+    <main>
+        <form action="processing.html" method="post">
+            First Name: <input type="text" name="first"><br>
+            Last Name: <input type="text" name="last"><br>
+            Password: <input type="password" name="password" placeholder="Enter your Password"><br>
+            <input type="checkbox" name="remember"> Remember me<br>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+                            <br>
+            <input type="range" name="volume" min="0" max="100" value="50"><br>
+            <input type="date" name="birthdate"> <br>
+            <input type="color" name="favorite_color"><br>
+            <input type="submit" value="submit!"><br>
+            <input type="reset" value="Reset">
+
+
+        </form>
+        <h2>The form tag has an "action" attribute. What does it do?</h2>
+        <blockquote>
+            <ul>
+                <li>The action attribute specifies the URL where the form data will be sent when the form is submitted. This is typically a script (like a PHP, Python, or JavaScript file) or a server-side application endpoint that will process the form data.</li>
+            </ul>
+        </blockquote>
+        <h2>The form tag has a "method" attribute. What does it do?</h2>
+        <blockquote>
+            <ul>
+                <li>The method attribute defines the HTTP method used when submitting the form data to the server. The two most common methods are GET and POST.</li>
+            </ul>
+        </blockquote>
+        <h2>What is the difference between a "POST" and a "GET"?</h2>
+        <blockquote>
+            <ul>
+                <li>Get: The GET method appends the form data to the URL as query parameters. The data is visible in the URL, so it is less secure.</li>
+                <li>
+                    GET is generally used for retrieving data (e.g., search queries) and should not be used for sensitive information like passwords.
+                </li>
+                <li>GET requests have a limit on the amount of data that can be sent due to URL length restrictions.</li>
+            
+            <hr>
+            <li>
+                The POST method sends the form data in the body of the request rather than the URL. As a result, the data is not visible in the URL and can be much larger.
+            </li>
+            <li>
+                POST is used for submitting data that modifies the server state, such as creating or updating records, or for handling sensitive information.
+            </li>
+        </ul>
+        </blockquote>
+    </main>
+    <footer>
+        <p>&copy; 2024 Michael-Lee</p>
+    </footer>
+</body>
+</html>
