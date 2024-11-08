@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form2.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <nav>
+        <a href="#">Link</a>
+    </nav>
+    <main>
+        <fieldset>
+            <legend>Sign Up</legend>
+            <form action="processing.html" method="post">
+                <div class="form-row">
+                  <label for="fname">First Name:</label>
+                  <input type="firstname" name="fn" id="first" placeholder="Enter your First Name">
+                </div>
+                <div class="form-row">
+                  <label for="lname">Last Name:</label>
+                  <input type="lastname" name="ln" id="last" placeholder="Enter your Last Name">
+                </div>
+                <div class="form-row">
+                  <label for="pass">Password:</label>
+                  <input type="password" name="pw" id="pass" placeholder="Enter your Password">
+                </div>
+                <div class="check-row">
+                    <div class="spacer"></div>
+                  <label>
+                      <input type="checkbox" name="remember" checked>
+                      Remember Me
+                  </label>
+                </div>
+                <div class="form-row">
+                  Class:
+                  <label><input type="radio" name="class" value="freshman">Freshman</label>
+                  <label><input type="radio" name="class" value="sophomore">sophomore</label>
+                </div>
+                <div class="form-row">
+                  <label for="comments">Comments</label>
+                  <textarea name="comments" id="comments" placeholder="Comment Something"></textarea>
+                </div>
+                <div class="form-row">
+                  <label for="state">State</label>
+                  <select name="state" id="state">
+                      <option value="blank"></option>
+                      <option value="CA">California</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="LA">Las Vegas</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                    <div class="spacer"></div>
+                    <input type="submit">
+                </div>
+              </form>
+        </fieldset>
+        
+        <h2>What are different ways to style your form?</h2>
+        <blockquote>
+            <ul>
+                <li>You can use padding, margin, alignment, form width, font and text styling, Input field styling, and many more.</li>
+            </ul>
+        </blockquote>
+        <h2>Why does the professor like to use flex?</h2>
+        <blockquote>
+            <ul>
+                <li>Because it simplifies the layouts and allows you to align form elements (inputs, labels, buttons) in rows or columns without needing complex CSS tricks (like floats or inline-blocks).</li>
+            </ul>
+        </blockquote>
+    </main>
+    <footer>
+        <p>&copy; 2024 Michael-Lee</p>
+    </footer>
+</body>
+</html>
