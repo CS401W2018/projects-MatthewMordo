@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewJeans Concert Sign-Up</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sign Up for the NewJeans Concert</h1>
+  </header>
+
+  <main>
+    <form action="process_form.html" method="post">
+      
+      <fieldset>
+        <legend>Concert Sign-Up Form</legend>
+
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+       
+        <label for="seating">Preferred Seating:</label>
+        <select id="seating" name="seating">
+          <option value="general">General Admission</option>
+          <option value="vip">VIP</option>
+          <option value="balcony">Balcony</option>
+        </select>
+
+       
+        <label>Preferred Concert Date:</label>
+        <div class="inline-options">
+          <label><input type="radio" name="date" value="day1"> Day 1</label>
+          <label><input type="radio" name="date" value="day2"> Day 2</label>
+        </div>
+
+        
+        <div class="inline-options">
+          <label><input type="checkbox" name="terms" required> I agree to the terms and conditions</label>
+        </div>
+
+        
+        <label for="comments">Comments or Special Requests:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+        
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </main>
+
+  
+  <footer>
+    <p>&copy; 2024 Michael-Lee</p>
+  </footer>
+
+</body>
+</html>
