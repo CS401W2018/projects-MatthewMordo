@@ -19,16 +19,16 @@
         <legend>Concert Sign-Up Form</legend>
 
         
-        <label for="name" id="fullname">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="Fname" id="fullname">First Name:</label>
+        <input type="text" id="Fname" name="Fname" required>
 
         
-        <label for="password" id="fullpass">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="Lname" id="fullpass">Last Name:</label>
+        <input type="text" id="Lname" name="Lname" required>
 
         
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
 
         
         <label for="phone">Phone Number:</label>
@@ -57,9 +57,20 @@
         
         <label for="comments">Comments or Special Requests:</label>
         <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
-
-        <button type="submit">Submit</button>
+        <fieldset>
+        <label for="comments">Engagement Question Answers:</label>
+        <p><h2>What is JavaScript? How did it get its name?</h2></p>
+        <p>JavaScript is a versatile, high-level programming language commonly used for web development. Initially created to make websites interactive, it enables dynamic content on the client side (in the browser).</p>
+        <p>JavaScript was originally developed by Brendan Eich at Netscape and was initially called "Mocha," then "LiveScript." In 1995, Netscape rebranded it as "JavaScript" to capitalize on the popularity of Java, though the two languages are quite different. The name helped it gain attention as Java was well-known at the time.</p>
+        <p><h2>What are the two ways you can run JavaScript?</h2></p>
+        <p><strong>In a Web Browser:</strong> JavaScript is often run directly in web browsers, embedded in HTML files, where it can manipulate the HTML and CSS to create interactive web pages.</p>
+        <p><strong>On a Server:</strong>With environments like Node.js, JavaScript can also run on the server side, enabling full-stack JavaScript applications.</p>
+        <p><h2>What was the most popular front-end js library?</h2></p>
+        <p>jQuery was the most popular front-end JavaScript library from the late 2000s through the mid-2010s, offering simplified DOM manipulation and cross-browser compatibility, which was especially valuable during that time.</p>
+        <p><h2>What is the most popular front-end js library today?</h2></p>
+        <p>React has become the most popular front-end library, developed by Facebook. React allows developers to create reusable UI components and efficiently update and render user interfaces based on state changes, making it ideal for building modern, complex applications.</p>
       </fieldset>
+      <button type="submit">Submit</button>
     </form>
   </main>
 
@@ -68,22 +79,34 @@
     <p>&copy; 2024 Michael-Lee</p>
   </footer>
   <script>
-        document.getElementById('myForm').addEventListener('submit',function(event){
-            event.preventDefault();
-            const first = document.getElementById('name').value;
-            const pass = document.getElementById('password').value;
-            const mail = document.getElementById('email').value;
-            const num = document.getElementById('phone').value;
-            const seat = document.getElementById('seating').value;
-            const date = document.getElementById('day').value;
-            console.log(first);
-            console.log(pass);
-            console.log(mail);
-            console.log(num);
-            console.log(seat);
-            console.log(date);
-            alert("Form Submitted");
-    })
-  </script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const first = document.getElementById('Fname').value;
+        const last = document.getElementById('Lname').value;
+        const age = parseInt(document.getElementById('age').value);
+        const num = document.getElementById('phone').value;
+        const seat = document.getElementById('seating').value;
+        const date = document.getElementById('day').value;
+        
+        if (!first || !last) {
+            alert("You need a first and last name.");
+            return;
+        }
+        
+        if (!age || age < 18) {  
+            alert("You must be 18 or older.");
+            return;
+        }
+        
+        const formData = {
+            Fname: first,
+            Lname: last,
+            age: age
+        };
+        
+        console.log(formData);
+        alert("Form Submitted");
+    });
+</script>
 </body>
 </html>
