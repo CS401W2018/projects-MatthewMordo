@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewJeans Concert Sign-Up</title>
+  <link rel="stylesheet" href="Javaform.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sign Up for the NewJeans Concert</h1>
+  </header>
+
+  <main>
+    <div id="message"></div>
+    <form action="process_form.html" method="post" id="myForm">
+      
+      <fieldset>
+        <legend>Concert Sign-Up Form</legend>
+
+        
+        <label for="Fname" id="fullname">First Name:</label>
+        <input type="text" id="Fname" name="Fname" required>
+
+        
+        <label for="Lname" id="fullpass">Last Name:</label>
+        <input type="text" id="Lname" name="Lname" required>
+
+        
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+       
+        <label for="seating">Preferred Seating:</label>
+        <select id="seating" name="seating">
+          <option value="general">General Admission</option>
+          <option value="vip">VIP</option>
+          <option value="balcony">Balcony</option>
+        </select>
+
+       
+        <label>Preferred Concert Date:</label>
+        <div class="inline-options">
+          <label><input type="radio" name="date" value="day1" id="day"> Day 1</label>
+          <label><input type="radio" name="date" value="day2" id="day"> Day 2</label>
+        </div>
+
+        
+        <div class="inline-options">
+          <label><input type="checkbox" name="terms" required> I agree to the terms and conditions</label>
+        </div>
+
+        
+        <label for="comments">Comments or Special Requests:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        <fieldset>
+        <label for="comments">Engagement Question Answers:</label>
+        <p><h2>What is AJAX?</h2></p>
+        <p>AJAX stands for Asynchronous JavaScript and XML. It is a technique used to make web pages more dynamic and interactive by allowing web applications to send and receive data from a server asynchronously (in the background) without having to reload the entire page. This results in a smoother user experience, as only parts of a web page are updated, rather than the whole page.</p>
+        <p><h2>Why do you put your JS Code in a separate file?</h2></p>
+        <p>There are several benefits to placing your JavaScript (JS) code in a separate file rather than embedding it directly within your HTML:</p>
+        <p><strong>Separation of Concerns:</strong> Keeping JavaScript code separate from HTML allows for better organization and easier maintenance. It makes the HTML cleaner and more focused on structure, while the JavaScript is responsible for behavior and interaction.</p>
+        <p><strong>Reusability:</strong>When you place JS in a separate file, you can reuse the same script across multiple pages or projects without duplicating code. This makes it more efficient to manage.</p>
+        <p><strong>Improved Performance:</strong>When you separate JS into its own file, browsers can cache that file, which means it doesn’t need to be downloaded again each time a user navigates to a different page on the site. This improves load times for subsequent pages.</p>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  
+  <footer>
+    <p>&copy; 2024 Michael-Lee</p>
+  </footer>
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const first = document.getElementById('Fname').value;
+        const last = document.getElementById('Lname').value;
+        const age = parseInt(document.getElementById('age').value);
+        const num = document.getElementById('phone').value;
+        const seat = document.getElementById('seating').value;
+        const date = document.getElementById('day').value;
+        
+        if (!first || !last) {
+            alert("You need a first and last name.");
+            return;
+        }
+        
+        if (!age || age < 18) {  
+            alert("You must be 18 or older.");
+            return;
+        }
+        
+        const formData = {
+            Fname: first,
+            Lname: last,
+            age: age
+        };
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "submit.json", true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.onreadystatechange = function (){
+          if (xhr.readyState === 4 && xhr.status === 200){
+            const response = JSON.parse(xhr.response);
+            document.getElementById('message').innerHTML = response.message;
+          } else if (xhr.readyState === 4){
+            alert('Error submitting form');
+          }
+        };
+        xhr.send(JSON.stringify(formData));
+        console.log(formData);
+    });
+</script>
+</body>
+</html>
