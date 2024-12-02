@@ -95,32 +95,35 @@ main {
   
 }
 
+.video-frame {
+  border: 2px solid #1d1f33; 
+}
+
 .gallery {
-  display: flex; /* Enables flexbox layout */
-  justify-content: space-between; /* Distributes space between the cards */
-  gap: 20px; /* Adds space between cards */
-  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  display: flex; 
+  justify-content: space-between; 
+  gap: 20px; 
+  flex-wrap: wrap; 
 }
 
 .card, .card2 {
-  border: 2px solid #1d1f33; /* Adds a border around the card */
-  padding: 20px; /* Adds space inside the card */
-  border-radius: 10px; /* Rounds the corners of the card */
+  border: 2px solid #1d1f33; 
+  padding: 20px;
+  border-radius: 10px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #b1b8f1; /* Light background for the card */
-  max-width: 45%; /* Controls the card size */
+  background-color: #b1b8f1; 
+  max-width: 45%; 
   text-align: center;
   margin: 10px;
 }
 
 .card p, .card2 p {
   margin-top: 10px;
-  font-style: italic; /* Keeps the text style as em */
+  font-style: italic; 
 }
-
 
 
 .mainform{
