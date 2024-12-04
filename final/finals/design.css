@@ -55,7 +55,7 @@ nav ul li a.current {
 }
 
 .responsive-image {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -239,9 +239,10 @@ main {
 
 .gallery {
   display: flex; 
-  justify-content: space-between; 
-  gap: 20px; 
-  flex-wrap: wrap; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    margin: 20px 0; 
 }
 
 .card, .card2 {
@@ -253,15 +254,23 @@ main {
   align-items: center;
   justify-content: center;
   background-color: #b1b8f1; 
-  max-width: 45%; 
+  max-width: 500px; 
   text-align: center;
   margin: 10px;
+  box-sizing: border-box;
+  flex: 1 1 calc(50% - 20px);
+}
+
+.card2 iframe {
+  width: 100%; 
+  height: 100%; 
 }
 
 .card p, .card2 p {
   margin-top: 10px;
   font-style: italic; 
 }
+
 
 
 .mainform{
@@ -457,6 +466,10 @@ main {
   }
 
 @media (max-width: 768px) {
+
+  .card, .card2 {
+    flex: 1 1 100%; 
+}
 
     .hero a {
     padding: 1em; 
