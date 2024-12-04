@@ -138,10 +138,13 @@ nav ul li a:hover {
 .hero a {
   text-decoration: none;
   background-color: white;
-  color: #000000;
+  color: #000;
   padding: 0.8em 1.5em;
   font-weight: bold;
   border-radius: 25px;
+  display: inline-block; 
+  text-align: center;
+  min-width: 150px; 
   transition: background 0.3s ease;
 }
 
@@ -454,6 +457,12 @@ main {
   }
 
 @media (max-width: 768px) {
+
+    .hero a {
+    padding: 1em; 
+    font-size: 1em; 
+    min-width: 120px; 
+}
     nav ul {
         flex-direction: column;
     }
