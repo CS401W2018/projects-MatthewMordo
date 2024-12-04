@@ -1,0 +1,57 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: antiquewhite;
+}
+
+nav{
+    padding: 20px;
+    
+}
+
+nav a{
+    border: thick solid khaki;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+main div{
+    border: thin solid blueviolet;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#p1{
+    background-color: aquamarine;
+}
+
+.p2{
+    background-color: blueviolet;
+}
+
+.p3{
+    background-color: azure;
+}
+
+.flinks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.flinks a{
+    border: thin solid blueviolet;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+
