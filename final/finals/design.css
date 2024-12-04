@@ -280,8 +280,8 @@ main {
 }
 
 .title-card {
-  width: 300px; /* Increased width */
-  height: 500px; /* Increased height */
+  width: 300px; 
+  height: 500px; 
   perspective: 1000px; 
   margin: 50px; 
 }
