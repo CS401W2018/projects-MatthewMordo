@@ -7,8 +7,8 @@ public class GraphicsFun extends JPanel {
     
     @Override
     public void paintComponent(Graphics g){
-        g.drawString("Hello CS202!", 57, 59 );
-        g.drawString("Miss Mink23", 57, 69 );
+        g.drawString("Hello CS202!", 10, 10);
+        g.drawString("Miss Mink23", 10, 30);
     }
 
     
