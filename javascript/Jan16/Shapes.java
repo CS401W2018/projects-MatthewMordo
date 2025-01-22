@@ -11,7 +11,7 @@ public class Shapes extends JPanel{
     public void paintComponent(Graphics g){
 
         int changeY = 300;
-        int changeX = 100;
+        int changeX = 0;
 
 
         // left Joycon
