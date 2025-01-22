@@ -51,22 +51,22 @@ public class BeachHutScene extends JPanel {
             g.fillOval(i, getHeight() * 3 / 4 + changeY - 10, 40, 20);
         }
  
-         // Hut body
-         g.setColor(Color.MAGENTA);
-         g.fillRect(220 + changeX, 100 + changeY, 150, 150);
- 
-         // Hut roofs
-         g.setColor(Color.ORANGE);
-         g.fillRect(190 + changeX, 40 + changeY, 220, 20); // Top roof
-         g.fillRect(210 + changeX, 80 + changeY, 180, 20); // Main roof
-         g.fillRect(200 + changeX, 60 + changeY, 200, 20); // Upper roof
-         
-         // Door
-         g.setColor(Color.BLACK);
-         g.fillRect(270 + changeX, 170 + changeY, 40, 80);
- 
-         // Window
-         g.fillRect(300 + changeX, 120 + changeY, 20, 20);
+         // Hut body (move it up by 80 pixels to make the hut float)
+        g.setColor(Color.MAGENTA);
+        g.fillRect(220 + changeX, 100 + changeY - 80, 150, 150); // Move hut 50 pixels up
+
+        // Hut roofs (move them up by 80 pixels)
+        g.setColor(Color.ORANGE);
+        g.fillRect(190 + changeX, 40 + changeY - 80, 220, 20); // Top roof
+        g.fillRect(210 + changeX, 80 + changeY - 80, 180, 20); // Main roof
+        g.fillRect(200 + changeX, 60 + changeY - 80, 200, 20); // Upper roof
+
+        // Door (80 pixels to with the hut)
+        g.setColor(Color.BLACK);
+        g.fillRect(270 + changeX, 170 + changeY - 80, 40, 80);
+
+        // Window (80 pixels to with the hut)
+        g.fillRect(300 + changeX, 120 + changeY - 80, 20, 20);
 
          // Sign beside the hut
         g.setColor(Color.cyan);
@@ -88,7 +88,7 @@ public class BeachHutScene extends JPanel {
         g.setColor(Color.cyan);
         g.fillRect(463, 50, 120, 20); // Banner background
         g.setColor(Color.BLACK);
-        g.drawRect(463, 50, 120, 20); // Banner border
+        g.drawRect(465, 50, 120, 20); // Banner border
         g.drawString("GO SEASIDERS!!", 470, 65); // Banner text
     }
 
