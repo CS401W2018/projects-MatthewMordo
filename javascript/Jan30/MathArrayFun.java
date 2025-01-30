@@ -17,41 +17,41 @@ public class MathArrayFun extends JPanel {
         {100, 100, 100},
     };
 
-    // Declare an ImageIcon for Hanni's picture
+    
     ImageIcon hanniImage;
 
     public MathArrayFun() {
-        // Load Hanni's image in the constructor
-        hanniImage = new ImageIcon("hanni.png");  // Make sure the file exists in the correct path
+        
+        hanniImage = new ImageIcon("C:\\Users\\User1\\Downloads\\projects-MatthewMordo\\javascript\\Jan30\\hanni.jpg");  
     }
 
     @Override
     public void paintComponent(Graphics g) {
-        super.paintComponent(g);  // Call the superclass's paintComponent method
+        super.paintComponent(g);  
 
-        int y = 20;  // Initial vertical position for drawing
+        int y = 20;  
         double average;
 
-        // Loop through each student
+        
         for (int i = 0; i < studentNames.length; i++) {
-            average = 0;  // Reset the average for each student
+            average = 0;  
 
-            // Calculate the average score for the current student
+            
             for (int j = 0; j < testScores[i].length; j++) {
                 average += testScores[i][j];
             }
-            average /= testScores[i].length;  // Get the average score for the student
+            average /= testScores[i].length;  
 
-            // Draw the student's name and average score
+            
             g.drawString(studentNames[i] + " : " + average, 10, y);
 
-            // If the student's name is "Hanni", draw her image
+            
             if (studentNames[i].equals("Hanni")) {
-                g.drawImage(hanniImage.getImage(), 200, y - 10, this);  // Draw image near the text
-                y += hanniImage.getIconHeight();  // Increase y to prevent overlap with image height
+                g.drawImage(hanniImage.getImage(), 200, y - 10, this);  
+                y += hanniImage.getIconHeight();  
             }
 
-            y += 20;  // Increase y for the next student
+            y += 20;  
         }
     }
 
