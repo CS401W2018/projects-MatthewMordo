@@ -11,7 +11,7 @@ public class Fun {
     public static void main(String[] args) {
 
         try {
-            File f = new File("randomNumbers.txt");
+            File f = new File("C:\\Users\\User1\\Downloads\\projects-MatthewMordo\\javascript\\Feb6\\randomNumbers.txt");
             Scanner reader = new Scanner(f);
             int i = 0;
             
