@@ -1,3 +1,5 @@
+package Feb25;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -22,6 +24,9 @@ public class Main extends JPanel {
 
         Cloud cloudCopy = new Cloud(cloudOverload);
         cloudCopy.draw(g);
+
+        Mountain mountain = new Mountain(100, getHeight() / 2, 300, getHeight() / 2);
+        mountain.draw(g);
     }
 
     public static void main(String[] args) {
