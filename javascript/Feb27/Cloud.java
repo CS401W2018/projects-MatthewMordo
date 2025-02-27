@@ -1,6 +1,7 @@
-package Feb25;
+package Feb27;
 
 import java.awt.*;
+import java.util.Optional;
 
 public class Cloud {
     private Color c;
@@ -8,6 +9,17 @@ public class Cloud {
     private int yCord;
     private int width;
     private int height;
+    private Cloud neighbor;
+
+
+
+    public Optional<Cloud> getNeighbor(){
+     return Optional.ofNullable(neighbor);
+    }
+
+    public void setNeighbor(Cloud neighbor) {
+        this.neighbor = neighbor;
+    }
 
     public Cloud(int x, int y) {
         width = 100;

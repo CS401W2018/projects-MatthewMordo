@@ -1,4 +1,4 @@
-package Feb25;
+package Feb27;
 
 import java.awt.*;
 import java.util.Random;
@@ -11,7 +11,7 @@ public class Mountain {
     private int height;
     private Color color;
 
-    public  Mountain(int x, int y, int width, int height){
+    public Mountain(int x, int y, int width, int height){
         this.x = x;
         this.y = y;
         this.width = width;
@@ -34,5 +34,25 @@ public class Mountain {
         g.setColor(color);
         g.fillPolygon(xPoints,yPoints,3);
 
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setColor(String season) {
+        if (Season.FALL.equals(season)) {
+            color = Color.ORANGE;
+        } else if (Season.WINTER.equals(season)) {
+            color = Color.LIGHT_GRAY;
+        } else if (Season.SPRING.equals(season)) {
+            color = Color.GREEN;
+        } else {
+            color = Color.YELLOW;
+        }
     }
 }
