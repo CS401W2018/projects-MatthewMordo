@@ -1,35 +1,18 @@
+package Mar4;
+
 import java.awt.*;
 
-public class Mountain {
-    private int x;
-    private int y;
-    private int width;
-    private int height;
-    private Color color;
+public class Mountain extends Shape {
 
-    public Mountain(int x, int y, int width, int height) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        //color = this.getRandomColor();
-    }
-    //Create a method that will randomize the color of your mountain.
-    //call the  new method inside the constructor using "this"
-
-    public Color getRandomColor() {
-        //Red Green Blue //255
-        int red = (int) (Math.random() * 255 + 1);
-        int green = (int) (Math.random() * 256);
-        int blue = (int) (Math.random() * 256);
-
-        return new Color(red, green, blue);
+    public Mountain (int x, int y, int width, int height) {
+        super(x,y,width,height);
+        color = getRandomColor();
     }
 
+    @Override
     public void draw(Graphics g) {
         int[] xPoints = {x, x + width / 2, x + width};
-        int[] yPoints = {y + height,
-                y,  y + height};
+        int[] yPoints = {y + height, y,  y + height};
         g.setColor(color);
         g.fillPolygon(xPoints, yPoints, 3);
     }
