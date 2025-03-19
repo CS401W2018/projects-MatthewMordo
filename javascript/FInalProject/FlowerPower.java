@@ -35,6 +35,21 @@ public class FlowerPower extends JPanel {
         g.setColor(Color.YELLOW);
         g.fillOval(30, 30, 100, 100); // Adjust size and position as needed
 
+        // Draw birds in the sky - Commodore 64 style
+        g.setColor(Color.BLACK); // Birds are black
+
+        // First bird
+        int bird1X = 250; // X position
+        int bird1Y = 80;  // Y position
+        g.drawLine(bird1X, bird1Y, bird1X + 10, bird1Y - 5); // Left wing
+        g.drawLine(bird1X + 10, bird1Y - 5, bird1X + 20, bird1Y); // Right wing
+
+        // Second bird (offset)
+        int bird2X = 300;
+        int bird2Y = 90;
+        g.drawLine(bird2X, bird2Y, bird2X + 10, bird2Y - 5); // Left wing
+        g.drawLine(bird2X + 10, bird2Y - 5, bird2X + 20, bird2Y); // Right wing
+
         // Draw the garden **only if there's enough space**
         if (height >= gardenHeight) {
             garden.draw(g);
