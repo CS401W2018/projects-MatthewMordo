@@ -4,15 +4,25 @@ import javax.swing.JPanel;
 import javax.swing.JFrame;
 import java.awt.Graphics;
 import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class FlowerPower extends JPanel {
+
+public class FlowerPower extends JPanel implements KeyListener {
     private Garden garden; // The garden instance
     private final int gardenHeight = 300; // Fixed garden height
     private final int skyHeight = 300; // The rest will be sky
+    private MathProblem mathProblem; // New MathProblem instance
 
     // Constructor
     public FlowerPower() {
         garden = new Garden(); // Instantiate the garden
+        mathProblem = new MathProblem(); // Instantiate a new math problem
+
+        // Add KeyListener to listen for key presses
+        addKeyListener(this);
+        setFocusable(true);
+        requestFocusInWindow();
     }
 
     // Paint the component (draw the background and the garden)
@@ -50,11 +60,32 @@ public class FlowerPower extends JPanel {
         g.drawLine(bird2X, bird2Y, bird2X + 10, bird2Y - 5); // Left wing
         g.drawLine(bird2X + 10, bird2Y - 5, bird2X + 20, bird2Y); // Right wing
 
+        // Draw the math problem
+        g.setColor(Color.BLACK);
+        mathProblem.draw(g, width, height);
+
         // Draw the garden **only if there's enough space**
         if (height >= gardenHeight) {
             garden.draw(g);
         }
+
+        // Ensure focus is maintained so key presses are detected
+        requestFocusInWindow();
     }
+
+    // KeyListener methods
+    @Override
+    public void keyPressed(KeyEvent e) {
+        // Generate a new math problem when a key is pressed
+        mathProblem = new MathProblem();
+        repaint(); // Redraw the screen with the new problem
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {} // Not needed
+
+    @Override
+    public void keyTyped(KeyEvent e) {} // Not needed
 
     // Main method to run the application
     public static void main(String[] args) {

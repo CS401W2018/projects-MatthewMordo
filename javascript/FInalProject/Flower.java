@@ -1,29 +1,15 @@
 package FInalProject;
 
-import java.awt.Graphics;
 import java.awt.Point;
-import javax.swing.ImageIcon;
 import java.util.Random;
+import javax.swing.ImageIcon;
 
-public class Flower {
-    private ImageIcon image;
-    private Point pos;
-
-    // Constructor
+public class Flower extends Plant {
+    // Constructor: Calls super and assigns a random flower image
     public Flower(Point pos) {
-        this.pos = pos;
-        // Randomly select an image for the flower
+        super(pos);
         String[] images = {"javascript\\FInalProject\\flower0-1.png", "javascript\\FInalProject\\flower1-1.png", "javascript\\FInalProject\\flower2-1.png", "javascript\\FInalProject\\flower3-1.png"};
         Random rand = new Random();
         image = new ImageIcon(images[rand.nextInt(images.length)]);
-    }
-
-    // Draw method
-    public void draw(Graphics g) {
-        if (image != null) {
-            g.drawImage(image.getImage(), pos.x, pos.y, null);
-        } else {
-            g.drawString("Flower", pos.x, pos.y);
-        }
     }
 }

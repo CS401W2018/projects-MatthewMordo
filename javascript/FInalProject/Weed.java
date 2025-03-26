@@ -1,26 +1,12 @@
 package FInalProject;
 
-import javax.swing.ImageIcon;
-import java.awt.Graphics;
 import java.awt.Point;
+import javax.swing.ImageIcon;
 
-public class Weed extends Flower {
-    private ImageIcon image;
-    private Point pos;
-
-    // Constructor
+public class Weed extends Plant {
+    // Constructor: Calls super and assigns the weed image
     public Weed(Point pos) {
-        super(pos); // Explicitly call the Flower constructor with a Point parameter
-        this.pos = pos;
-        image = new ImageIcon("javascript\\FInalProject\\weed-1.png"); // Always uses weed image
-    }
-
-    // Draw method
-    public void draw(Graphics g) {
-        if (image != null) {
-            g.drawImage(image.getImage(), pos.x, pos.y, null);
-        } else {
-            g.drawString("Weed", pos.x, pos.y);
-        }
+        super(pos);
+        image = new ImageIcon("javascript\\FInalProject\\weed-1.png");
     }
 }
