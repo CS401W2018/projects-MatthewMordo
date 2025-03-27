@@ -5,9 +5,15 @@ import java.util.Optional;
 
 public class Cloud extends Shape {
     private Cloud neighbor;
+    private String name;
 
     public Cloud(int x, int y) {
         super(x,y);
+    }
+
+    public Cloud(int x, int y, String name){
+        super(x, y);
+
     }
 
     public Cloud(int x, int y, Color color) {
@@ -46,5 +52,7 @@ public class Cloud extends Shape {
         g.drawString("I'm just floating by",x + 15, y + 30);
     }
 
-
+    public String getName() {
+        return name;
+    }
 }
