@@ -25,7 +25,7 @@ public class FlowerPower extends JPanel implements KeyListener {
         requestFocusInWindow();
     }
 
-    // Paint the component (draw the background and the garden)
+    // Paint the component (draws the background and the garden)
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -45,8 +45,7 @@ public class FlowerPower extends JPanel implements KeyListener {
         g.setColor(Color.YELLOW);
         g.fillOval(30, 30, 100, 100); // Adjust size and position as needed
 
-        // Draw birds in the sky - Commodore 64 style
-        g.setColor(Color.BLACK); // Birds are black
+        g.setColor(Color.BLACK); // Birds colors
 
         // First bird
         int bird1X = 250; // X position
